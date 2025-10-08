@@ -242,7 +242,7 @@ main {
     transition: transform 0.3s;
 }
 
-.exame{
+.exame {
     background-color: #f3eeee;
     padding: 20px;
     border-radius: 8px;
@@ -359,22 +359,33 @@ hr {
     }
 }
 
-.exam{
+.exam {
     width: 100%;
     margin-bottom: 30px;
     padding: 0 250px;
     display: block;
 }
 
-.lista-exame{
+.lista-exame {
     padding: 0 250px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.title-sintoma{
-      color: #c0392b;
+.title-sintoma {
+    color: #c0392b;
+}
+
+@media (max-width: 768px) {
+
+    .exam {
+        padding: 0 20px;
+    }
+
+    .lista-exame {
+        padding: 20px;/
+    }
 }
 
 .site-footer {
