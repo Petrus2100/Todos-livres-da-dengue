@@ -21,6 +21,7 @@ main {
     display: grid;
     grid-template-columns: 5fr 4fr;
     grid-template-areas: "foto texto";
+    /* A área 'texto' existe aqui */
     gap: 30px;
     margin: 40px auto 30px;
 }
@@ -51,7 +52,7 @@ main {
             "foto"
             "texto";
         gap: 20px;
-        padding: 0 15px; 
+        padding: 0 15px;
     }
 }
 
@@ -81,6 +82,7 @@ main {
     padding: 0;
     width: 40px;
     border-radius: 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +176,7 @@ main {
 #main-header .icon img,
 #main-header .ico-contact a,
 #main-header .search-box,
-#main-header .search-btn, 
+#main-header .serach-btn,
 #main-header .search-txt {
     transition: all 0.3s ease;
 }
@@ -212,18 +214,13 @@ main {
     padding: 0 5px;
 }
 
-
 @media (max-width: 1024px) {
-    #main-header {
+    header {
         padding: 10px 20px;
     }
 
     .icon img {
-        width: 60px; 
-    }
-
-    .navbar {
-        gap: 30px; 
+        width: 35px;
     }
 
     .navbar a {
@@ -232,63 +229,34 @@ main {
 }
 
 @media (max-width: 768px) {
-    #main-header {
-        height: 60px; 
-        padding: 5px 20px;
-    }
-    
-    #main-header.shrink {
-        height: 50px; 
-    }
-
-    .icon img {
-        width: 50px; 
+    header {
+        flex-direction: row;
     }
 
     .navbar {
         display: none;
         flex-direction: column;
         background: #333;
-        top: 60px; 
-        right: 0;
-        width: 100%; 
-        padding: 15px 0;
-        border-radius: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        width: 200px;
     }
-    
+
     .navbar.show {
         display: flex;
     }
 
     .navbar a {
         color: #fff;
-        margin: 5px 20px; 
-        font-size: 16px;
-        text-align: center;
-        padding: 8px 15px;
-    }
-    
-    .navbar a:hover {
-        background-color: #686864;
+        margin: 10px 0;
+        font-size: 14px;
     }
 
     .menu-toggle {
         display: flex;
-    }
-    
-    .ico-contact,
-    .search-box {
-        display: none; 
-    }
-    
-    .search-box.open {
-        display: flex;
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        width: 70%;
-        max-width: 200px;
     }
 }
 
@@ -336,7 +304,7 @@ main {
 
 @media (max-width: 500px) {
     .lista-acoes {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         padding: 0 10px;
     }
 }
@@ -465,17 +433,15 @@ main {
 
 @media (max-width: 650px) {
     .lista-cuidados {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         padding: 0 20px;
     }
 
     .text-title {
         margin-top: 40px;
-        padding: 0 30px; 
         font-size: 24px;
     }
 }
-
 
 .listT {
     max-width: 900px;
@@ -513,6 +479,7 @@ main {
     flex-direction: row-reverse;
 }
 
+
 @media (max-width: 600px) {
     .listT {
         max-width: 90%;
@@ -526,6 +493,10 @@ main {
         align-items: center;
     }
 
+    .listT>div:nth-child(2) {
+        flex-direction: column;
+    }
+
     .medidas p,
     .listT>div:nth-child(2) p {
         font-size: 14px;
@@ -537,6 +508,7 @@ main {
         max-width: 80%;
     }
 }
+
 
 
 .alerta-final {
