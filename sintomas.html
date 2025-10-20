@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sintomas</title>
     <link rel="stylesheet" href="css/style-sintomas.css">
+    <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">
 </head>
 
 <body>
-     <header id="main-header">
+    <header id="main-header">
         <div class="icon">
             <a href="index.html">
                 <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png"
@@ -21,7 +22,7 @@
             <a href="sintomas.html">Sintomas</a>
             <a href="aedes.html">Aedes aegypti</a>
             <a href="acoes.html">Ações para combate</a>
-            <a href="#Tecnologia">Combate a dengue junto com a gente</a>
+            <a href="combate.html">Combata a dengue junto com a gente</a>
             <a href="tratamento.html">Tratamento</a>
             <a href="#Cv"></a>
         </nav>
@@ -30,12 +31,12 @@
             <a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a>
             <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
                     src="imagens/github(1).png" /></a>
-             <div class="search-box" id="search-box">
-                <input type="text" class="search-txt" id="search-txt" placeholder="Pesquisar">
-                <a href="" class="search-btn" id="search-btn">
-                    <img height="20" widht="20" src="imagens/lupa.png" alt="">  
-                </a>
-            </div>
+            <form id="search-box" class="search-box" action="/search-results" method="get">
+                <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar">
+                <button type="submit" class="search-btn" id="search-btn">
+                    <img height="20" width="20" src="imagens/lupa.png" alt="Pesquisar">
+                </button>
+            </form>
         </div>
         </div>
 
@@ -46,102 +47,110 @@
         </div>
     </header>
 
- <main>
-    
-    <div class="semi-container">
-        <h1 class="semi-sintoma">Sintomas da Dengue</h1>
+    <main>
 
-        <h2 class="semi-sintoma">Reconheça a Dengue: Principais Sintomas</h2>
-        
-        <div class="sintomas">
-            <img src="imagens/febre.png" alt="Sintoma de febre alta">
-            <h3>Febre Alta Repentina</h3>
-            <p>A dengue costuma iniciar com uma febre alta (39°C a 40°C) que surge de forma súbita. Geralmente, dura de 2 a 7 dias.</p>
+        <div class="semi-container">
+            <h1 class="semi-sintoma">Sintomas da Dengue</h1>
+
+            <h2>Reconheça a Dengue: Principais Sintomas</h2>
+
+            <div class="sintomas">
+                <img src="imagens/febre.png" alt="Sintoma de febre alta">
+                <h3>Febre Alta Repentina</h3>
+                <p>A dengue costuma iniciar com uma febre alta (39°C a 40°C) que surge de forma súbita. Geralmente, dura
+                    de 2 a 7 dias.</p>
+            </div>
+
+            <div class="sintomas">
+                <img src="imagens/dor-de-cabeca.png" alt="Sintoma de dores de cabeça">
+                <h3>Dores Intensas de cabeça</h3>
+                <p>Dores de cabeça: Intensa, especialmente na região atrás dos olhos.</p>
+            </div>
+
+            <div class="sintomas">
+                <img src="imagens/dor-muscular.png" alt="Sintomas de dores nos musculos">
+                <h3>Dor muscular</h3>
+                <p>Dores: Musculares e nas articulações.</p>
+            </div>
+
+            <div class="sintomas">
+                <img src="imagens/fraqueza.png" alt="Sintomas de cansaço e fraqueza muscular">
+                <h3>Cansaço</h3>
+                <p>Cansaço e fraqueza muito fortes, mal-estar geral.</p>
+            </div>
+
+            <div class="sintomas">
+                <img src="imagens/machas na pele.png" alt="Manchas na pele">
+                <h3>Manchas vermelhas na pele</h3>
+                <p>Manchas vermelhas (exantema), que podem aparecer após o terceiro ou quarto dia.</p>
+            </div>
+
+            <h2 class="titulo-alerta">2. Sinais de Alarme: Busque Ajuda Imediata!</h2>
+            <p class="alerta-texto">Estes sinais surgem na **fase crítica** (quando a febre baixa, entre o 3º e o 7º
+                dia) e indicam que a doença está se agravando. **Procure uma EMERGÊNCIA imediatamente**.</p>
+
+            <div class="sinais-alarme">
+                <ul>
+                    <li>⚠️ **Dor abdominal intensa e contínua** (ou dor ao toque/palpação na barriga).</li>
+                    <li>⚠️ **Vômitos persistentes** (3 a 5 vezes ou mais em 24 horas).</li>
+                    <li>⚠️ **Sangramento de mucosas** (gengiva, nariz) ou presença de sangue no vômito/fezes.</li>
+                    <li>⚠️ **Acúmulo de líquidos** (inchaço repentino, dificuldade para urinar).</li>
+                    <li>⚠️ **Letargia ou Irritabilidade** (sonolência excessiva, desmaio, ou confusão mental).</li>
+                    <li>⚠️ **Hipotensão postural** (tontura ou queda de pressão ao levantar).</li>
+                </ul>
+            </div>
+
+            <p class="alerta-final">**Não use medicamentos com Ácido Acetilsalicílico (AAS) ou anti-inflamatórios!**
+                Eles aumentam o risco de hemorragias. Siga sempre a orientação médica.</p>
+
         </div>
 
-        <div class="sintomas">
-            <img src="imagens/dor-de-cabeca.png" alt="Sintoma de dores de cabeça">
-            <h3>Dores Intensas de cabeça</h3>
-            <p>Dores de cabeça: Intensa, especialmente na região atrás dos olhos.</p>
-        </div>
+        <h1 class="exam">Exames</h1>
+        <div class="lista-exame">
+            <h2>Há três tipos de exame disponíveis no Brasil para detectar a doença: antígeno NS1, sorologia e RT-PCR.
+            </h2>
 
-        <div class="sintomas">
-            <img src="imagens/dor-muscular.png" alt="Sintomas de dores nos musculos">
-            <h3>Dor muscular</h3>
-            <p>Dores: Musculares e nas articulações.</p>
-        </div>
+            <h3 class="title-sintoma">Antígeno NS1</h3>
+            <ul class="exame">
+                <li>Quando fazer: Ideal para os primeiros dias de sintomas, geralmente até o 5º dia, quando o vírus está
+                    se replicando no corpo.</li>
+                <li>O que detecta: Uma proteína específica do vírus da dengue, a NS1.</li>
+                <li>Tipos: Pode ser feito como teste rápido (em farmácias e laboratórios) ou como exame laboratorial.
+                </li>
+            </ul>
 
-         <div class="sintomas">
-            <img src="imagens/fraqueza.png" alt="Sintomas de cansaço e fraqueza muscular">
-            <h3>Cansaço</h3>
-            <p>Cansaço e fraqueza muito fortes, mal-estar geral.</p>
-        </div>
+            <h3 class="title-sintoma">Teste Sorológico (IgM e IgG) </h3>
 
-         <div class="sintomas">
-            <img src="imagens/machas na pele.png" alt="Manchas na pele">
-            <h3>Manchas vermelhas na pele</h3>
-            <p>Manchas vermelhas (exantema), que podem aparecer após o terceiro ou quarto dia.</p>
-        </div>
+            <ul class="exame">
+                <li>Quando fazer: A partir do 6º dia dos sintomas.</li>
+                <li>O que detecta: Anticorpos que o corpo produz para combater a infecção. O IgM indica infecção recente
+                    e o IgG pode indicar uma infecção antiga ou resposta imune mais forte.</li>
+                <li>Tipos: É um teste laboratorial, não encontrado em farmácias. </li>
+            </ul>
 
-        <h2 class="semi-sintoma titulo-alerta">2. Sinais de Alarme: Busque Ajuda Imediata!</h2>
-        <p class="alerta-texto">Estes sinais surgem na **fase crítica** (quando a febre baixa, entre o 3º e o 7º dia) e indicam que a doença está se agravando. **Procure uma EMERGÊNCIA imediatamente**.</p>
-        
-        <div class="sinais-alarme">
-            <ul>
-                <li>⚠️ **Dor abdominal intensa e contínua** (ou dor ao toque/palpação na barriga).</li>
-                <li>⚠️ **Vômitos persistentes** (3 a 5 vezes ou mais em 24 horas).</li>
-                <li>⚠️ **Sangramento de mucosas** (gengiva, nariz) ou presença de sangue no vômito/fezes.</li>
-                <li>⚠️ **Acúmulo de líquidos** (inchaço repentino, dificuldade para urinar).</li>
-                <li>⚠️ **Letargia ou Irritabilidade** (sonolência excessiva, desmaio, ou confusão mental).</li>
-                <li>⚠️ **Hipotensão postural** (tontura ou queda de pressão ao levantar).</li>
+            <h3 class="title-sintoma">RT-PCR (Teste Molecular) </h3>
+
+            <ul class="exame">
+                <li>Quando fazer: Também nos primeiros dias de infecção, quando o vírus está ativo.</li>
+                <li>O que detecta: O material genético do vírus, o que permite a identificação da presença do vírus no
+                    organismo.</li>
+                <li>Tipos: É um teste laboratorial realizado a partir de uma amostra de sangue. </li>
             </ul>
         </div>
-        
-        <p class="alerta-final">**Não use medicamentos com Ácido Acetilsalicílico (AAS) ou anti-inflamatórios!** Eles aumentam o risco de hemorragias. Siga sempre a orientação médica.</p>
-        
-    </div>
-
-    <h1 class="exam">Exames</h1>
-    <div class="lista-exame">
-        <h2>Há três tipos de exame disponíveis no Brasil para detectar a doença: antígeno NS1, sorologia e RT-PCR.</h2>
-
-        <h3 class="title-sintoma">Antígeno NS1</h3>
-        <ul class="exame">
-            <li>Quando fazer: Ideal para os primeiros dias de sintomas, geralmente até o 5º dia, quando o vírus está se replicando no corpo.</li>
-            <li>O que detecta: Uma proteína específica do vírus da dengue, a NS1.</li>
-            <li>Tipos: Pode ser feito como teste rápido (em farmácias e laboratórios) ou como exame laboratorial. </li>
-        </ul>
-
-        <h3 class="title-sintoma">Teste Sorológico (IgM e IgG) </h3>
-
-        <ul class="exame">
-            <li>Quando fazer: A partir do 6º dia dos sintomas.</li>
-            <li>O que detecta: Anticorpos que o corpo produz para combater a infecção. O IgM indica infecção recente e o IgG pode indicar uma infecção antiga ou resposta imune mais forte.</li>
-            <li>Tipos: É um teste laboratorial, não encontrado em farmácias. </li>
-        </ul>
-
-        <h3 class="title-sintoma">RT-PCR (Teste Molecular) </h3>
-
-        <ul class="exame">
-            <li>Quando fazer: Também nos primeiros dias de infecção, quando o vírus está ativo.</li>
-            <li>O que detecta: O material genético do vírus, o que permite a identificação da presença do vírus no organismo.</li>
-            <li>Tipos: É um teste laboratorial realizado a partir de uma amostra de sangue. </li>
-        </ul>
-    </div>
-</main>
+    </main>
 
 
 
-<footer class="site-footer">
+    <footer class="site-footer">
         <div class="footer-container">
 
             <div class="footer-column navigation">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="Equipe-fontes/">Sobre Nós</a></li>
                     <li><a href="sintomas.html">Sintomas</a></li>
-                    <li><a href="#prevencao">Prevenção</a></li>
+                    <li><a href="acoes.html">Prevenção</a></li>
                 </ul>
             </div>
 
@@ -149,9 +158,9 @@
                 <h4>Recursos Oficiais</h4>
                 <ul>
                     <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
-                    <li><a href="#notificacao">Notificar Foco</a></li>
-                    <li><a href="#unidades">Unidades de Saúde</a></li>
-                    <li><a href="#mapas">Mapa de Casos (Opcional)</a></li>
+                    <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
+                    <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
+                    <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
                 </ul>
             </div>
 
@@ -160,7 +169,7 @@
                 <ul>
                     <li><a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a></li>
                     <li> <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                    src="imagens/github(1).png" /></a></li>
+                                src="imagens/github(1).png" /></a></li>
                     <li><a href="#creditos">Fontes e Créditos</a></li>
                 </ul>
             </div>
@@ -172,8 +181,9 @@
         </div>
     </footer>
 
- <script src="script.js"></script>
+    <script src="script.js"></script>
 
-    
+
 </body>
+
 </html>

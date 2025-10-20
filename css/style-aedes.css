@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fff;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-claro);
 }
 
 main {
@@ -66,11 +66,11 @@ main {
     transition: width 0.4s ease, opacity 0.4s ease;
 }
 
-.serach-btn {
+.search-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #333;
+    background: #efeeee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,8 @@ main {
 }
 
 .search-box.open .search-txt {
-    width: 180px;
+    flex-grow: 1;
+    width: auto;   
     opacity: 1;
     padding: 0 10px;
 }
@@ -101,14 +102,21 @@ main {
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 4px; 
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00bcd4;
+    background-color: #686864; 
+    color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
 }
 
 .menu-toggle {
@@ -145,11 +153,13 @@ main {
 #main-header.shrink .search-box {
     height: 30px;
     width: 30px;
+    border-radius: 50%; 
 }
 
-#main-header.shrink .serach-btn {
+#main-header.shrink .search-btn { 
     height: 30px;
     width: 30px;
+    border-radius: 50%; 
 }
 
 #main-header.shrink .search-box.open {
@@ -157,7 +167,10 @@ main {
 }
 
 #main-header.shrink .search-box.open .search-txt {
-    width: 130px;
+    /* Usa a largura restante do Flexbox no estado 'shrink' */
+    flex-grow: 1;
+    width: auto;
+    
     line-height: 30px;
     font-size: 14px;
     padding: 0 5px;

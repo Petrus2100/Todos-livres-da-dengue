@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fff;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-claro);
 }
 
 main {
@@ -100,11 +100,11 @@ main {
     transition: width 0.4s ease, opacity 0.4s ease;
 }
 
-.serach-btn {
+.search-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #333;
+    background: #efeeee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +116,8 @@ main {
 }
 
 .search-box.open .search-txt {
-    width: 180px;
+    flex-grow: 1;
+    width: auto; 
     opacity: 1;
     padding: 0 10px;
 }
@@ -140,14 +141,21 @@ main {
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  border-radius: 4px; 
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #00bcd4;
+    background-color: #686864; 
+    color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
 }
 
 .menu-toggle {
@@ -184,11 +192,13 @@ main {
 #main-header.shrink .search-box {
     height: 30px;
     width: 30px;
+    border-radius: 50%; 
 }
 
-#main-header.shrink .serach-btn {
+#main-header.shrink .search-btn { 
     height: 30px;
     width: 30px;
+    border-radius: 50%; 
 }
 
 #main-header.shrink .search-box.open {
@@ -196,7 +206,8 @@ main {
 }
 
 #main-header.shrink .search-box.open .search-txt {
-    width: 130px;
+    flex-grow: 1;
+    width: auto;
     line-height: 30px;
     font-size: 14px;
     padding: 0 5px;
@@ -253,10 +264,10 @@ main {
     margin-bottom: 30px;
     padding: 0 100px;
     display: block;
+    color: #333;
+    border-bottom: 3px solid #00bcd4; 
 }
 
-
-/* 1. CONTAINER PRINCIPAL: Lista de Ações */
 .lista-acoes {
     max-width: 1200px; 
     width: 90%;
@@ -278,25 +289,19 @@ main {
 }
 
 .item-acao img {
-    /* Define um tamanho fixo pequeno para o ícone/imagem */
     width: 40px; 
     height: 40px;
-    /* Garante que a imagem não se estique */
     flex-shrink: 0; 
 }
 
-/* 4. ESTILOS DO TEXTO */
 .item-acao p {
-    /* Ocupa o espaço restante */
     flex-grow: 1; 
     margin: 0;
     line-height: 1.4;
     font-size: 16px;
 }
 
-/* 5. MEDIA QUERY PARA TELAS MUITO PEQUENAS (CELULARES) */
 @media (max-width: 500px) {
-    /* Em telas muito estreitas, mantém apenas uma coluna grande */
     .lista-acoes {
         grid-template-columns: 1fr;
         padding: 0 10px; 
