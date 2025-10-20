@@ -20,7 +20,8 @@ main {
     width: 90%;
     display: grid;
     grid-template-columns: 5fr 4fr;
-    grid-template-areas: "foto texto"; /* A área 'texto' existe aqui */
+    grid-template-areas: "foto texto";
+    /* A área 'texto' existe aqui */
     gap: 30px;
     margin: 40px auto 30px;
 }
@@ -31,17 +32,17 @@ main {
 }
 
 .bloco-texto {
-    grid-area: texto; 
+    grid-area: texto;
 }
 
 .title-text {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .texto-foto p {
-    margin-top: 0; 
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +50,7 @@ main {
         grid-template-columns: 1fr;
         grid-template-areas:
             "foto"
-            "texto"; 
+            "texto";
         gap: 20px;
         padding: 0 15px;
     }
@@ -117,7 +118,7 @@ main {
 
 .search-box.open .search-txt {
     flex-grow: 1;
-    width: auto; 
+    width: auto;
     opacity: 1;
     padding: 0 10px;
 }
@@ -141,21 +142,21 @@ main {
 }
 
 .navbar a {
-  position: relative;
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 5px 0;
-  border-radius: 4px; 
-  transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #686864; 
-    color: white; 
+    background-color: #686864;
+    color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    
+
 }
 
 .menu-toggle {
@@ -192,13 +193,13 @@ main {
 #main-header.shrink .search-box {
     height: 30px;
     width: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
-#main-header.shrink .search-btn { 
+#main-header.shrink .search-btn {
     height: 30px;
     width: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 #main-header.shrink .search-box.open {
@@ -259,43 +260,43 @@ main {
     }
 }
 
-.text-title{
+.text-title {
     width: 100%;
     margin-bottom: 30px;
     padding: 0 100px;
     display: block;
     color: #333;
-    border-bottom: 3px solid #00bcd4; 
+    border-bottom: 3px solid #00bcd4;
 }
 
 .lista-acoes {
-    max-width: 1200px; 
+    max-width: 1200px;
     width: 90%;
-    margin: 20px auto; 
+    margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 10px;
 }
 
 .item-acao {
-    display: flex; 
-    align-items: flex-start; 
+    display: flex;
+    align-items: flex-start;
     gap: 15px;
     padding: 15px;
-    border: 1px solid #eee; 
+    border: 1px solid #eee;
     border-radius: 8px;
     background-color: #f9f9f9;
 }
 
 .item-acao img {
-    width: 40px; 
+    width: 40px;
     height: 40px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .item-acao p {
-    flex-grow: 1; 
+    flex-grow: 1;
     margin: 0;
     line-height: 1.4;
     font-size: 16px;
@@ -304,7 +305,7 @@ main {
 @media (max-width: 500px) {
     .lista-acoes {
         grid-template-columns: 1fr;
-        padding: 0 10px; 
+        padding: 0 10px;
     }
 }
 
@@ -392,35 +393,35 @@ main {
 }
 
 .text-title-two {
-    text-align: center; 
+    text-align: center;
     font-size: 28px;
     font-weight: bold;
     color: #333;
-    margin: 60px auto 30px; 
+    margin: 60px auto 30px;
 }
 
 .lista-cuidados {
     max-width: 900px;
-    margin: 0 auto 60px; 
+    margin: 0 auto 60px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .cuidados {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .cuidados img {
-    width: 100%; 
-    max-width: 200px; 
+    width: 100%;
+    max-width: 200px;
     height: auto;
-    object-fit: cover; 
-    border-radius: 8px; 
-    margin-bottom: 15px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .cuidados p {
@@ -433,7 +434,7 @@ main {
 @media (max-width: 650px) {
     .lista-cuidados {
         grid-template-columns: 1fr;
-        padding: 0 20px; 
+        padding: 0 20px;
     }
 
     .text-title {
@@ -444,49 +445,81 @@ main {
 
 .listT {
     max-width: 900px;
-    margin: 40px auto; 
+    margin: 40px auto;
     display: flex;
-    flex-direction: column; 
-    gap: 40px; 
+    flex-direction: column;
+    gap: 40px;
 }
 
 .medidas,
-.listT > div:nth-child(2) { 
-    display: flex; 
-    align-items: flex-start; 
-    gap: 20px; 
+.listT>div:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .medidas img,
-.listT > div:nth-child(2) img {
-    width: 100%; 
-    max-width: 350px; 
+.listT>div:nth-child(2) img {
+    width: 100%;
+    max-width: 350px;
     height: auto;
     border-radius: 8px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .medidas p,
-.listT > div:nth-child(2) p {
-    flex-grow: 1; 
+.listT>div:nth-child(2) p {
+    flex-grow: 1;
     font-size: 16px;
-    line-height: 1.6; 
+    line-height: 1.6;
     color: #333;
 }
 
-.listT > div:nth-child(2) {
+.listT>div:nth-child(2) {
     flex-direction: row-reverse;
 }
+
+
+@media (max-width: 600px) {
+    .listT {
+        max-width: 90%;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .medidas,
+    .listT>div:nth-child(2) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .listT>div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .medidas p,
+    .listT>div:nth-child(2) p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .medidas img,
+    .listT>div:nth-child(2) img {
+        max-width: 80%;
+    }
+}
+
+
 
 .alerta-final {
     background-color: #f1c40f40;
     border: 1px solid #f1c40f;
-    color: #333; 
+    color: #333;
     border-radius: 8px;
     padding: 20px 30px;
     text-align: center;
     font-weight: 700;
-    max-width: 900px; 
-    width: 90%; 
-    margin: 30px auto; 
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
 }
