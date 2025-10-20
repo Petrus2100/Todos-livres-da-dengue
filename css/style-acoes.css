@@ -15,7 +15,6 @@ main {
     padding-top: 100px;
 }
 
-/* --- Bloco Texto-Foto --- */
 .texto-foto {
     max-width: 900px;
     width: 90%;
@@ -45,20 +44,17 @@ main {
     margin-top: 0;
 }
 
-/* Responsividade do Bloco Texto-Foto */
 @media (max-width: 768px) {
     .texto-foto {
-        /* Muda de colunas para empilhamento */
         grid-template-columns: 1fr;
         grid-template-areas:
             "foto"
             "texto";
         gap: 20px;
-        padding: 0 15px; /* Adiciona padding lateral para telas menores */
+        padding: 0 15px; 
     }
 }
 
-/* --- Cabeçalho (Header) --- */
 #main-header {
     position: fixed;
     top: 0;
@@ -79,7 +75,6 @@ main {
     padding: 5px 30px;
 }
 
-/* Estilos de Pesquisa e Barra de Navegação... */
 .search-box {
     background-color: #F4F4F4;
     height: 40px;
@@ -179,7 +174,7 @@ main {
 #main-header .icon img,
 #main-header .ico-contact a,
 #main-header .search-box,
-#main-header .search-btn, /* Corrigido: 'serach-btn' para 'search-btn' */
+#main-header .search-btn, 
 #main-header .search-txt {
     transition: all 0.3s ease;
 }
@@ -217,21 +212,18 @@ main {
     padding: 0 5px;
 }
 
-/* --- Responsividade do Cabeçalho --- */
 
-/* Média para telas de tablet horizontal/desktop pequeno */
 @media (max-width: 1024px) {
-    /* CORRIGIDO: mudando 'header' para o ID correto '#main-header' */
     #main-header {
         padding: 10px 20px;
     }
 
     .icon img {
-        width: 60px; /* Mantém um tamanho razoável */
+        width: 60px; 
     }
 
     .navbar {
-        gap: 30px; /* Reduz o espaçamento do menu */
+        gap: 30px; 
     }
 
     .navbar a {
@@ -239,30 +231,27 @@ main {
     }
 }
 
-/* Média para telas de tablet vertical/celular */
 @media (max-width: 768px) {
-    /* CORRIGIDO: mudando 'header' para o ID correto '#main-header' */
     #main-header {
-        height: 60px; /* Altura menor no celular */
+        height: 60px; 
         padding: 5px 20px;
     }
     
     #main-header.shrink {
-        height: 50px; /* Ainda menor se encolher */
+        height: 50px; 
     }
 
     .icon img {
-        width: 50px; /* Logo menor no celular */
+        width: 50px; 
     }
 
     .navbar {
         display: none;
         flex-direction: column;
         background: #333;
-        /* Altera a posição para cobrir melhor o topo */
         top: 60px; 
         right: 0;
-        width: 100%; /* Faz o menu lateral ocupar toda a largura */
+        width: 100%; 
         padding: 15px 0;
         border-radius: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -274,7 +263,7 @@ main {
 
     .navbar a {
         color: #fff;
-        margin: 5px 20px; /* Adiciona padding lateral */
+        margin: 5px 20px; 
         font-size: 16px;
         text-align: center;
         padding: 8px 15px;
@@ -288,14 +277,12 @@ main {
         display: flex;
     }
     
-    /* Esconde a caixa de contato e pesquisa para dar espaço ao menu toggle */
     .ico-contact,
     .search-box {
         display: none; 
     }
     
     .search-box.open {
-        /* Mantém a caixa de pesquisa aberta se for clicada */
         display: flex;
         position: absolute;
         right: 20px;
@@ -305,7 +292,6 @@ main {
     }
 }
 
-/* --- Título Geral --- */
 .text-title {
     width: 100%;
     margin-bottom: 30px;
@@ -315,7 +301,6 @@ main {
     border-bottom: 3px solid #00bcd4;
 }
 
-/* --- Lista de Ações (Grid) --- */
 .lista-acoes {
     max-width: 1200px;
     width: 90%;
@@ -349,15 +334,13 @@ main {
     font-size: 16px;
 }
 
-/* Responsividade da Lista de Ações */
 @media (max-width: 500px) {
     .lista-acoes {
-        grid-template-columns: 1fr; /* Muda para uma única coluna */
+        grid-template-columns: 1fr; 
         padding: 0 10px;
     }
 }
 
-/* --- Rodapé (Footer) --- */
 .site-footer {
     background-color: #5b5454;
     color: #fff;
@@ -378,17 +361,56 @@ main {
     min-width: 180px;
     margin: 0 15px;
 }
-/* ... (outros estilos de rodapé) ... */
 
-/* Responsividade do Rodapé */
+.footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #00bcd4;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d1c1c1;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    background-color: #999191;
+}
+
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Empilha as colunas */
+        flex-direction: column;
     }
 
     .footer-column {
-        margin: 15px auto; /* Centraliza as colunas */
-        min-width: 80%; /* Ajusta a largura */
+        margin: 15px 0;
+        min-width: 100%;
         text-align: center;
     }
 
@@ -397,23 +419,11 @@ main {
         margin-bottom: 10px;
     }
 
-    .footer-column ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    .footer-column ul li {
-        margin-bottom: 5px;
-    }
-    
     .social-links {
         margin-bottom: 10px;
     }
 }
 
-/* --- Cuidados (Grid de 2 Colunas) --- */
 .text-title-two {
     text-align: center;
     font-size: 28px;
@@ -453,21 +463,20 @@ main {
     padding: 0 10px;
 }
 
-/* Responsividade do Bloco de Cuidados */
 @media (max-width: 650px) {
     .lista-cuidados {
-        grid-template-columns: 1fr; /* Muda para uma única coluna */
+        grid-template-columns: 1fr; 
         padding: 0 20px;
     }
 
     .text-title {
         margin-top: 40px;
-        padding: 0 30px; /* Reduz o padding lateral do título */
+        padding: 0 30px; 
         font-size: 24px;
     }
 }
 
-/* --- ListT (Blocos de Conteúdo) --- */
+
 .listT {
     max-width: 900px;
     margin: 40px auto;
@@ -504,7 +513,6 @@ main {
     flex-direction: row-reverse;
 }
 
-/* Responsividade do Bloco ListT */
 @media (max-width: 600px) {
     .listT {
         max-width: 90%;
@@ -514,13 +522,9 @@ main {
 
     .medidas,
     .listT>div:nth-child(2) {
-        /* Empilha e Centraliza */
         flex-direction: column;
         align-items: center;
     }
-
-    /* REMOVIDO: Linha redundante que repetia flex-direction: column */
-    /* .listT>div:nth-child(2) { flex-direction: column; } */
 
     .medidas p,
     .listT>div:nth-child(2) p {
@@ -535,7 +539,6 @@ main {
 }
 
 
-/* --- Alerta Final --- */
 .alerta-final {
     background-color: #f1c40f40;
     border: 1px solid #f1c40f;
