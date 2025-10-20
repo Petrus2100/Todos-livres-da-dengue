@@ -457,6 +457,21 @@ h2 span {
     }
 }
 
+.exame {
+    background-color: #f3eeee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.lista-exame {
+    padding: 0 250px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .site-footer {
     background-color: #5b5454;
     color: #fff;
