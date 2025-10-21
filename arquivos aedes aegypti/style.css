@@ -318,12 +318,58 @@ h2 span {
 }
 
 .lista-transmmissao {
-    padding-left: 20px;
-    margin-left: 10px;
+    list-style-type: none; 
+    padding-left: 20px; 
+    margin-top: 10px;
 }
 
 .lista-transmmissao li {
+    position: relative;
+    margin-bottom: 8px; 
+    line-height: 1.5;
+}
+
+.lista-transmmissao li::before {
+    content: "•"; 
+    color: #007BFF; 
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+.lista-informacao {
+    list-style-type: none; 
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.lista-informacao li {
+    position: relative;
     margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.lista-informacao li::before {
+    content: "➢"; 
+    color: #28a745;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.sinais-sintomas ul:nth-of-type(2) { 
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 10px;
+    color: #333; 
+}
+
+.sinais-sintomas ul:nth-of-type(2) li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    color: #555; 
 }
 
 
@@ -555,3 +601,116 @@ h2 span {
     }
 }
 
+.sintomas-graves-febre {
+    color: #DC3545; 
+    border-bottom: 2px solid #DC3545; 
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.lista-grave {
+    list-style-type: none; 
+    padding-left: 0; 
+    margin-top: 15px;
+}
+
+.lista-grave li {
+    background-color: #FFF3F4; 
+    border-left: 5px solid #DC3545; 
+    padding: 10px 15px;
+    margin-bottom: 10px; 
+    line-height: 1.4;
+    color: #333; 
+    font-weight: bold; 
+    border-radius: 4px; 
+}
+
+.lista-grave li::before {
+    content: "⚠️ "; 
+    color: #DC3545;
+    font-weight: bolder;
+}
+
+.titulo-alerta{
+    color: #DC3545;
+    border-bottom: 3px solid #d42e00; 
+    font-weight: bolder;
+}
+
+/* Estilo geral para as listas de informações */
+.texto-resumo-1 ul,
+.texto-resumo-2 ul,
+.lista-tratamento {
+    list-style-type: none; /* Remove o marcador padrão */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+/* Estilizando a lista de Causas e Transmissão (texto-resumo-1) */
+.texto-resumo-1 ul li {
+    position: relative;
+    padding: 5px 0 5px 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #ccc; /* Linha tracejada suave entre os itens */
+}
+
+.texto-resumo-1 ul li::before {
+    content: "→"; /* Seta como marcador */
+    color: #007BFF; /* Cor azul primária */
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilizando o parágrafo de alerta antes dos sintomas (texto-resumo-2) */
+.texto-resumo-2 .alerta {
+    color: #CC6600; /* Cor de alerta para o texto */
+    font-weight: bold;
+    font-style: italic;
+    border-left: 3px solid #FFC107; /* Barra amarela de destaque */
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilizando a lista de Sintomas Comuns (texto-resumo-2) */
+.texto-resumo-2 ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.texto-resumo-2 ul li::before {
+    content: "→"; /* Marca de seleção (checkmark) */
+    color: #007BFF; /* Cor azul primária */
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilizando o cabeçalho de Tratamento */
+.tratamentos h1 {
+    color: #28A745; /* Cor verde para indicar tratamento/solução */
+    border-bottom: 2px solid #28A745;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* Estilizando a lista de Tratamento */
+.lista-tratamento li {
+    background-color: #E9F7EF; /* Fundo suave para os itens de tratamento */
+    border: 1px solid #28A745; /* Borda verde */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.lista-tratamento li::before {
+    content: "✓"; /* Checkmark como marcador */
+    color: #155724; /* Cor verde escuro */
+    font-weight: bold;
+    margin-right: 10px;
+}
