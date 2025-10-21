@@ -406,7 +406,11 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    background-color: #e3e3f5; 
+    padding: 20px; 
+    border-radius: 10px; 
 }
+
 
 .cuidados {
     display: flex;
@@ -449,7 +453,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    background-color: #e3e3f5; 
+    padding: 20px; 
+    border-radius: 10px; 
 }
+
 
 .medidas,
 .listT>div:nth-child(2) {
@@ -508,8 +516,6 @@ main {
         max-width: 80%;
     }
 }
-
-
 
 .alerta-final {
     background-color: #f1c40f40;

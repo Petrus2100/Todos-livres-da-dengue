@@ -387,6 +387,28 @@ main {
     filter: brightness(0.4);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e3f5; /* fundo geral */
+}
+
+.pilar-section {
+    background-color: #e3e3f5;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.pilar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
 .pilar {
     max-width: 1200px;
     margin: 40px auto;
@@ -561,6 +583,21 @@ main {
     .vídeo iframe {
         height: 250px;
     }
+}
+
+.video-informacao {
+    background-color: white; 
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.video {
+    background-color: white; 
+    display: inline-block;
+}
+
+.video iframe {
+    background-color: white; 
 }
 
 .site-footer {
