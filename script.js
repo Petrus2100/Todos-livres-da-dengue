@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 1. DECLARAÇÃO DE VARIÁVEIS DE COMPONENTES
     const slides = document.querySelectorAll('.slider');
     const nextBtn = document.getElementById('next-button');
     const prevBtn = document.getElementById('prev-button');
     const header = document.getElementById('main-header');
-    
-    // Variáveis da pesquisa:
+
     const searchBox = document.getElementById('search-box');
     const searchBtn = document.getElementById('search-btn');
     const searchTxt = document.getElementById('search-txt');
-    
+
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
     const scrollTrigger = 50;
@@ -20,81 +18,139 @@ document.addEventListener('DOMContentLoaded', function () {
     // --------------------------------------------------------------------------------
 
     // Mapeamento de palavras-chave para destinos (IDs internos ou URLs externos)
+    // Mapeamento de palavras-chave para destinos (IDs internos ou URLs externos)
     const mapeamentoBusca = {
-        // --- TRANSFERÊNCIA EXTERNA (Para outras páginas) ---
-        "sintomas": "sintomas.html", 
+
+        // =========================================================
+        // 1. TRANSFERÊNCIA EXTERNA (URLs Simples e com Âncoras)
+        // =========================================================
+
+        // Sintomas (sintomas.html)
+        "sintomas": "sintomas.html",
         "sintomas graves": "sintomas.html#grave-content",
+        "grave": "sintomas.html#grave-content",
+        "hemorragica": "sintomas.html#grave-content",
+
+        // Ações e Combate (combate.html / acoes.html)
         "combate": "combate.html",
         "acoes": "acoes.html",
+        "notificar": "combate.html",
+        "prevencao": "acoes.html",
+
+        // Tratamento (tratamento.html)
         "tratamento": "tratamento.html",
-        "sobre nós": "Equipe-fontes/index-sobre.html",
-        "nós": "Equipe-fontes/index-sobre.html",
+        "cura": "tratamento.html",
+        "medicacao": "tratamento.html",
 
-        //Página aedes
-        "video aedes": "aedes.html#video-aedes-content", 
-        "video aegypti": "aedes.html#video-aedes-content",
-        "aedes": "aedes.html",
-        
-        // Exemplo de doenças mapeadas para páginas específicas (Ajuste o caminho se necessário!)
+        // Equipe e Fontes
+        "sobre nós": "Equipe-fonte/index-sobre.html",
+        "nós": "Equipe-fonte/index-sobre.html",
+        "equipe": "Equipe-fonte/index-sobre.html",
+        "quem somos": "Equipe-fonte/index-sobre.html",
+
+        // =========================================================
+        // 2. DOENÇAS DOS CARDS (arquivos aedes aegypti/...)
+        // Mapeamento consolidado: Não há repetição de chaves!
+        // =========================================================
+
+        // ZIKA VÍRUS
         "zika": "arquivos aedes aegypti/zika-virus.html",
-        "chikungunya": "arquivos aedes aegypti/chikungunya.html",
-        "amarela": "arquivos aedes aegypti/febre-amarela.html",
+        "microcefalia": "arquivos aedes aegypti/zika-virus.html",
+        "guillain": "arquivos aedes aegypti/zika-virus.html",
+        "gestacao": "arquivos aedes aegypti/zika-virus.html",
+        "gravidez": "arquivos aedes aegypti/zika-virus.html",
 
-        // --- ROLAGEM INTERNA (Para seções da página atual, USANDO #) ---
-        "aedes": "#introducao-content",
+        // CHIKUNGUNYA
+        "chikungunya": "arquivos aedes aegypti/chikungunya.html",
+        "chik": "arquivos aedes aegypti/chikungunya.html",
+        "artrite": "arquivos aedes aegypti/chikungunya.html",
+        "articular": "arquivos aedes aegypti/chikungunya.html",
+        "cronica": "arquivos aedes aegypti/chikungunya.html",
+
+        // FEBRE AMARELA
+        "febre amarela": "arquivos aedes aegypti/febre-amarela.html",
+        "amarela": "arquivos aedes aegypti/febre-amarela.html",
+        "febre": "arquivos aedes aegypti/febre-amarela.html",
+        "vacina": "arquivos aedes aegypti/febre-amarela.html",
+        "visceral": "arquivos aedes aegypti/febre-amarela.html",
+        "silvestre": "arquivos aedes aegypti/febre-amarela.html",
+
+        // Página Aedes (aedes.html)
+        "video aedes": "aedes.html#video-aedes-content",
+        "video aegypti": "aedes.html#video-aedes-content",
+        "aedes": "aedes.html#aedes-content",
+        "aedes aegypti": "aedes.html#aedes-content",
+        "mosquito": "aedes.html#aedes-content",
+        "vetor": "aedes.html#aedes-content",
+
+        // Combate (combate.html)
+        "datasus": "combate.html#data-content",
+        "data sus": "combate.html#data-content",
+        "fumace": "combate.html#fumace-content",
+        "fumacê": "combate.html#fumace-content",
+        "calendario": "combate.html#calendario-content",
+        "calendarios": "combate.html#calendario-content",
+        "caminhao": "combate.html#fumace-content",
+        "cronograma": "combate.html#calendario-content",
+
+
+        // =========================================================
+        // 3. ROLAGEM INTERNA (Para seções da página atual - index.html)
+        // =========================================================
+
         "dengue": "#introducao-content",
         "info": "#introducao-content",
+        "informacao": "#introducao-content",
+        "principal": "#introducao-content",
+
         "carrossel": "#pagina",
         "campanha": "#pagina",
-        "febre": "#cards-content",
+        "slides": "#pagina",
+
+        "cards": "#cards-content",
+        "conheça mais": "#cards-content",
         "conheca": "#cards-content",
         "conheça": "#cards-content",
+        "doencas": "#cards-content",
+        "outras": "#cards-content",
+
         "video": "#video-content",
-        "video dengue": "video-content",
+        "video dengue": "#video-content",
         "assista": "#video-content",
-        "saiba mais": "footer-content",
+        "youtube": "#video-content",
 
-        //Tranferencia 
-
-      "video dengue": "index.html#video-content",
-      "conheça mais": "index.html#cards-content" 
+        "saiba mais": "#footer-content",
+        "rodape": "#footer-content"
     };
 
     function rolarParaSecao() {
         if (!searchTxt) return;
-        
+
         const termoPesquisa = searchTxt.value.trim().toLowerCase();
-        
-        // Encontra o URL/ID alvo baseado no mapeamento
+
         const destino = mapeamentoBusca[termoPesquisa];
 
         if (destino) {
             if (destino.startsWith('#')) {
-                // 1. ROLAGEM INTERNA: Se começar com '#', é uma âncora na página atual
-                const elementoAlvo = document.querySelector(destino); 
-                
+
+                const elementoAlvo = document.querySelector(destino);
+
                 if (elementoAlvo) {
                     elementoAlvo.scrollIntoView({
-                        behavior: 'smooth', 
-                        block: 'start'      
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             } else {
-                // 2. TRANSFERÊNCIA EXTERNA: Caso contrário, é um link de arquivo
-                window.location.href = destino; 
+                window.location.href = destino;
             }
 
-            // Limpa o campo após a ação
-            searchTxt.value = ''; 
+
+            searchTxt.value = '';
         }
     }
 
 
-    // --------------------------------------------------------------------------------
-    // LÓGICA DE EVENTOS (Carrossel, Header, Pesquisa, Menu)
-    // --------------------------------------------------------------------------------
-
-    // Carrossel
     if (slides.length > 0 && nextBtn && prevBtn) {
         function showSlide(index) {
             slides.forEach((slide, i) => {
@@ -128,15 +184,13 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', checkScroll);
     }
 
-    // Pesquisa e Fechamento
     if (searchBtn && searchBox && searchTxt) {
         searchBtn.addEventListener('click', (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             if (!searchBox.classList.contains('open')) {
-                searchBox.classList.add('open'); 
-                searchTxt.focus(); 
+                searchBox.classList.add('open');
+                searchTxt.focus();
             } else {
-                // Executa a função de rolagem/transferência
                 rolarParaSecao();
             }
             if (navbar.classList.contains('show')) {
@@ -144,11 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 menuToggle.classList.remove('open');
             }
         });
-        
-        // Adiciona a rolagem/transferência ao pressionar Enter
+
         searchTxt.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
-                e.preventDefault(); 
+                e.preventDefault();
                 rolarParaSecao();
             }
         });
@@ -162,22 +215,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Menu Toggle
     if (menuToggle && navbar) {
         menuToggle.addEventListener('click', () => {
             navbar.classList.toggle('show');
-            menuToggle.classList.toggle('open'); 
-            
+            menuToggle.classList.toggle('open');
+
             if (searchBox.classList.contains('open')) {
                 searchBox.classList.remove('open');
-                searchTxt.value = ''; 
+                searchTxt.value = '';
             }
         });
 
         document.addEventListener('click', (e) => {
             if (
-                navbar.classList.contains('show') && 
-                !navbar.contains(e.target) && 
+                navbar.classList.contains('show') &&
+                !navbar.contains(e.target) &&
                 !menuToggle.contains(e.target)
             ) {
                 navbar.classList.remove('show');
