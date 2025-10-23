@@ -5,37 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tratamento</title>
+    <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">    
     <link rel="stylesheet" href="css/style-tratamento.css">
-    <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
-        /* Estilos Customizados para a seção de Postos */
-        /* Note: Idealmente, estes estilos estariam em style-tratamento.css */
-        .search-container {
-            padding: 30px 0;
-            background-color: #f8f9fa; /* Cor de fundo para destacar a seção */
-            margin-top: 30px;
-        }
-        .carousel-container {
-            /* Define a altura do carrossel vertical */
-            max-height: 500px; /* Altura fixa para rolagem */
-            overflow-y: scroll; /* Permite a rolagem vertical */
-            padding-right: 15px; /* Espaço para a barra de rolagem */
-            padding-top: 10px;
-        }
-        .ubs-card {
-            margin-bottom: 15px;
-            border-left: 5px solid;
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-        .ubs-card.UBS {
-            border-left-color: #0d6efd; /* Azul Bootstrap */
-        }
-        .ubs-card.UPA {
-            border-left-color: #dc3545; /* Vermelho Bootstrap */
-        }
+       
+        
     </style>
 </head>
 
@@ -212,99 +187,7 @@
     
     <script>
         // Dados ATUALIZADOS das unidades de saúde na Grande São Paulo
-        const allUnits = [
-            // UNIDADES DA ZONA LESTE (Inicialmente visíveis)
-            { id: 12, nome: 'UBS Jardim Penha', tipo: 'UBS', endereco: 'Av. São Miguel, 3721', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2095-1000' },
-            { id: 13, nome: 'UBS Engenheiro Trindade', tipo: 'UBS', endereco: 'Av. Gabriela Mistral, 1168', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2296-2000' },
-            { id: 14, nome: 'UBS Vila Esperança Dr. Cássio Bittencourt Filho', tipo: 'UBS', endereco: 'Rua Alvinópolis, 1350', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2673-3000' },
-            { id: 15, nome: 'UBS Tiquatira', tipo: 'UBS', endereco: 'Av. Conde de Frontin, 600', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2682-4000' },
-            { id: 16, nome: 'UBS Cangaíba', tipo: 'UBS', endereco: 'Rua Itamumbuca, 52', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2958-5000' },
-            { id: 17, nome: 'UBS Jardim Danfer', tipo: 'UBS', endereco: 'Rua Cônego Xavier, 75', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2214-6000' },
-            { id: 18, nome: 'UBS Jardim Helena – Cangaíba', tipo: 'UBS', endereco: 'Rua Alfredo Casado, 58', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2958-7000' },
-            
-            // UNIDADES ZONA LESTE ANTERIORES
-            { id: 8, nome: 'UPA São Mateus', tipo: 'UPA', endereco: 'Av. Satélite, 784', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2701-2020' },
-            { id: 10, nome: 'UBS Itaquera', tipo: 'UBS', endereco: 'Rua Fontoura Xavier, 100', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2000-1234' },
-            { id: 11, nome: 'UPA Tatuapé', tipo: 'UPA', endereco: 'Rua Tuiuti, 2000', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2090-5678' },
-
-
-            // UNIDADES ZONA NORTE (Não visíveis na inicialização)
-            { id: 19, nome: 'UBS Vila Guilherme', tipo: 'UBS', endereco: 'Rua Maria Cândida, 1413', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2901-0101' },
-            { id: 20, nome: 'UBS Jardim Brasil', tipo: 'UBS', endereco: 'Av. Roland Garros, 305', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2238-0000' },
-            { id: 21, nome: 'UBS Vila Medeiros', tipo: 'UBS', endereco: 'Rua Itamonte, 41', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2210-0300' },
-            
-            // UNIDADES DE OUTRAS ZONAS/CIDADES (Mantidas para a função de Pesquisa)
-            { id: 1, nome: 'UBS Sé', tipo: 'UBS', endereco: 'Praça da Sé, Centro', municipio: 'São Paulo', zona: 'Centro', telefone: '11 3291-0000' },
-            { id: 4, nome: 'UBS Barueri Central', tipo: 'UBS', endereco: 'Av. Barueri, 100', municipio: 'Barueri', zona: 'Outra Cidade', telefone: '11 4198-1000' },
-            { id: 6, nome: 'UPA Centro de Guarulhos', tipo: 'UPA', endereco: 'R. Oswaldo Cruz, 100', municipio: 'Guarulhos', zona: 'Outra Cidade', telefone: '11 2475-4000' },
-        ];
-
-        const unitsListContainer = document.getElementById('unitsList');
-        const notFoundMessage = document.getElementById('notFoundMessage');
-        const searchInput = document.getElementById('searchInput');
-
-        // Funções de Renderização e Cards
-        function createUnitCard(unit) {
-            return `
-                <div class="card ubs-card shadow-sm ${unit.tipo}">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-1">${unit.nome}</h5>
-                            <span class="badge ${unit.tipo === 'UBS' ? 'bg-primary' : 'bg-danger'}">${unit.tipo}</span>
-                        </div>
-                        <p class="card-text text-muted mb-2">${unit.endereco} - ${unit.municipio} (${unit.zona})</p>
-                        <p class="card-text mb-0">
-                            <small class="text-muted">Tel: ${unit.telefone}</small>
-                        </p>
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderUnits(unitsToDisplay) {
-            unitsListContainer.innerHTML = '';
-            if (unitsToDisplay.length === 0) {
-                notFoundMessage.classList.remove('d-none');
-            } else {
-                notFoundMessage.classList.add('d-none');
-                unitsToDisplay.forEach(unit => {
-                    unitsListContainer.innerHTML += createUnitCard(unit);
-                });
-            }
-        }
-
-        // Função de Filtro
-        function filterUnits() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-
-            if (!searchTerm) {
-                // Se a busca estiver vazia, retorna à lista inicial: Zona Leste de São Paulo
-                const initialUnits = allUnits.filter(unit => 
-                    unit.zona === 'Leste' && unit.municipio === 'São Paulo'
-                );
-                renderUnits(initialUnits);
-                return;
-            }
-
-            // Se houver termo de busca, busca em TODAS as unidades
-            const filtered = allUnits.filter(unit => 
-                unit.nome.toLowerCase().includes(searchTerm) || 
-                unit.municipio.toLowerCase().includes(searchTerm) ||
-                unit.tipo.toLowerCase().includes(searchTerm) ||
-                unit.zona.toLowerCase().includes(searchTerm)
-            );
-
-            renderUnits(filtered);
-        }
-
-        // *** INICIALIZAÇÃO: Mostra apenas a Zona Leste de São Paulo ***
-        document.addEventListener('DOMContentLoaded', () => {
-            const initialUnits = allUnits.filter(unit => 
-                unit.zona === 'Leste' && unit.municipio === 'São Paulo'
-            );
-            
-            renderUnits(initialUnits);
-        });
+        
     </script>
     <script src="script.js"></script>
 </body>

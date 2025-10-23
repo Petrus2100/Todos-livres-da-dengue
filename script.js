@@ -13,18 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollTrigger = 50;
     let currentSlide = 0;
 
-    // --------------------------------------------------------------------------------
-    // LÓGICA DE PESQUISA E ROLAGEM/TRANSFERÊNCIA (UNIFICADA)
-    // --------------------------------------------------------------------------------
-
-    // Mapeamento de palavras-chave para destinos (IDs internos ou URLs externos)
-    // Mapeamento de palavras-chave para destinos (IDs internos ou URLs externos)
-
     const mapeamentoBusca = {
-        
-        // =========================================================
-        // 1. ARQUIVOS NA RAIZ (Usam "../" para funcionar na subpasta)
-        // =========================================================
 
         // Sintomas (sintomas.html)
         "sintomas": "../sintomas.html",
@@ -158,11 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
         "estatisticas": "../combate.html#data-content",
         "dados": "../combate.html#data-content",
 
-
-        // =========================================================
-        // 2. ARQUIVOS NA SUBPASTA (Com caminho completo)
-        // =========================================================
-
         // ZIKA VÍRUS
         "zika": "arquivos aedes aegypti/zika-virus.html",
         "microcefalia": "arquivos aedes aegypti/zika-virus.html",
@@ -201,11 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
         "urbanas": "arquivos aedes aegypti/febre-amarela.html",
         "dose": "arquivos aedes aegypti/febre-amarela.html",
         "imunizacao": "arquivos aedes aegypti/febre-amarela.html",
-
-
-        // =========================================================
-        // 3. ROLAGEM INTERNA (Para seções da página atual - index.html)
-        // =========================================================
         
         "dengue": "#introducao-content",
         "informacao": "#introducao-content",
@@ -233,10 +212,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "saiba mais": "#footer-content",
         "rodape": "#footer-content",
 
-        "sintomas": "sintomas.html", // Sem o "../"
+    "sintomas": "sintomas.html", 
     "sinais": "sintomas.html",
     "dor": "sintomas.html",
-    // ... todos os outros links para arquivos da raiz também devem estar sem o "../"
     "tratamento": "tratamento.html",
     "combate": "combate.html",
     "sobre nós": "Equipe-fonte/index-sobre.html",
@@ -296,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(currentSlide);
     }
 
-    // Header
     if (header) {
         function checkScroll() {
             if (window.scrollY > scrollTrigger) {
@@ -345,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.classList.toggle('show');
             menuToggle.classList.toggle('open');
 
-            if (searchBox.classList.contains('open')) {
+            if (searchBox && searchBox.classList.contains('open')) {
                 searchBox.classList.remove('open');
                 searchTxt.value = '';
             }
@@ -363,3 +340,94 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+const allUnits = [
+            // UNIDADES DA ZONA LESTE (Inicialmente visíveis)
+            { id: 12, nome: 'UBS Jardim Penha', tipo: 'UBS', endereco: 'Av. São Miguel, 3721', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2095-1000' },
+            { id: 13, nome: 'UBS Engenheiro Trindade', tipo: 'UBS', endereco: 'Av. Gabriela Mistral, 1168', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2296-2000' },
+            { id: 14, nome: 'UBS Vila Esperança Dr. Cássio Bittencourt Filho', tipo: 'UBS', endereco: 'Rua Alvinópolis, 1350', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2673-3000' },
+            { id: 15, nome: 'UBS Tiquatira', tipo: 'UBS', endereco: 'Av. Conde de Frontin, 600', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2682-4000' },
+            { id: 16, nome: 'UBS Cangaíba', tipo: 'UBS', endereco: 'Rua Itamumbuca, 52', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2958-5000' },
+            { id: 17, nome: 'UBS Jardim Danfer', tipo: 'UBS', endereco: 'Rua Cônego Xavier, 75', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2214-6000' },
+            { id: 18, nome: 'UBS Jardim Helena – Cangaíba', tipo: 'UBS', endereco: 'Rua Alfredo Casado, 58', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2958-7000' },
+            
+            // UNIDADES ZONA LESTE ANTERIORES
+            { id: 8, nome: 'UPA São Mateus', tipo: 'UPA', endereco: 'Av. Satélite, 784', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2701-2020' },
+            { id: 10, nome: 'UBS Itaquera', tipo: 'UBS', endereco: 'Rua Fontoura Xavier, 100', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2000-1234' },
+            { id: 11, nome: 'UPA Tatuapé', tipo: 'UPA', endereco: 'Rua Tuiuti, 2000', municipio: 'São Paulo', zona: 'Leste', telefone: '11 2090-5678' },
+
+
+            // UNIDADES ZONA NORTE (Não visíveis na inicialização)
+            { id: 19, nome: 'UBS Vila Guilherme', tipo: 'UBS', endereco: 'Rua Maria Cândida, 1413', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2901-0101' },
+            { id: 20, nome: 'UBS Jardim Brasil', tipo: 'UBS', endereco: 'Av. Roland Garros, 305', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2238-0000' },
+            { id: 21, nome: 'UBS Vila Medeiros', tipo: 'UBS', endereco: 'Rua Itamonte, 41', municipio: 'São Paulo', zona: 'Norte', telefone: '11 2210-0300' },
+            
+            // UNIDADES DE OUTRAS ZONAS/CIDADES (Mantidas para a função de Pesquisa)
+            { id: 1, nome: 'UBS Sé', tipo: 'UBS', endereco: 'Praça da Sé, Centro', municipio: 'São Paulo', zona: 'Centro', telefone: '11 3291-0000' },
+            { id: 4, nome: 'UBS Barueri Central', tipo: 'UBS', endereco: 'Av. Barueri, 100', municipio: 'Barueri', zona: 'Outra Cidade', telefone: '11 4198-1000' },
+            { id: 6, nome: 'UPA Centro de Guarulhos', tipo: 'UPA', endereco: 'R. Oswaldo Cruz, 100', municipio: 'Guarulhos', zona: 'Outra Cidade', telefone: '11 2475-4000' },
+        ];
+
+        const unitsListContainer = document.getElementById('unitsList');
+        const notFoundMessage = document.getElementById('notFoundMessage');
+        const searchInput = document.getElementById('searchInput');
+
+        function createUnitCard(unit) {
+            return `
+                <div class="card ubs-card shadow-sm ${unit.tipo}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-1">${unit.nome}</h5>
+                            <span class="badge ${unit.tipo === 'UBS' ? 'bg-primary' : 'bg-danger'}">${unit.tipo}</span>
+                        </div>
+                        <p class="card-text text-muted mb-2">${unit.endereco} - ${unit.municipio} (${unit.zona})</p>
+                        <p class="card-text mb-0">
+                            <small class="text-muted">Tel: ${unit.telefone}</small>
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderUnits(unitsToDisplay) {
+            unitsListContainer.innerHTML = '';
+            if (unitsToDisplay.length === 0) {
+                notFoundMessage.classList.remove('d-none');
+            } else {
+                notFoundMessage.classList.add('d-none');
+                unitsToDisplay.forEach(unit => {
+                    unitsListContainer.innerHTML += createUnitCard(unit);
+                });
+            }
+        }
+
+        
+        function filterUnits() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            if (!searchTerm) {
+                const initialUnits = allUnits.filter(unit => 
+                    unit.zona === 'Leste' && unit.municipio === 'São Paulo'
+                );
+                renderUnits(initialUnits);
+                return;
+            }
+
+            const filtered = allUnits.filter(unit => 
+                unit.nome.toLowerCase().includes(searchTerm) || 
+                unit.municipio.toLowerCase().includes(searchTerm) ||
+                unit.tipo.toLowerCase().includes(searchTerm) ||
+                unit.zona.toLowerCase().includes(searchTerm)
+            );
+
+            renderUnits(filtered);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialUnits = allUnits.filter(unit => 
+                unit.zona === 'Leste' && unit.municipio === 'São Paulo'
+            );
+            
+            renderUnits(initialUnits);
+        });
+    
