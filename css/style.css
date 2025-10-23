@@ -387,11 +387,13 @@ main {
     filter: brightness(0.4);
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #e3e3f5; /* fundo geral */
+    background-color: #e3e3f5;
+    /* fundo geral */
 }
 
 .pilar-section {
@@ -418,12 +420,12 @@ html, body {
     gap: 30px;
 }
 
-.pilar > div {
+.pilar>div {
     background-color: #fff;
     border-radius: 10px;
     transition: transform 0.3s ease;
     text-align: center;
-    padding-top: 15px; 
+    padding-top: 15px;
 }
 
 .pilar>div:hover {
@@ -439,10 +441,10 @@ html, body {
 
 .pilar img {
     width: 80%;
-    height: 300px; 
+    height: 300px;
     object-fit: cover;
     border-radius: 5%;
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .pilar h1 {
@@ -588,35 +590,35 @@ html, body {
 }
 
 .video-informacao {
-    background-color: white; 
-    padding: 20px 0; 
+    background-color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
 .video {
-    background-color: white; 
+    background-color: white;
     display: inline-block;
 }
 
 .video iframe {
-    background-color: white; 
+    background-color: white;
 }
 
 @media (max-width: 768px) {
     .video {
-        width: 90%; 
-        max-width: none; 
-        margin: 0 auto; 
-        display: block;  
-        
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+        display: block;
+
         position: relative;
-        padding-bottom: 56.25%; 
+        padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
     }
 
     .video iframe {
-        width: 100% !important; 
+        width: 100% !important;
         height: 100% !important;
         position: absolute;
         top: 0;
