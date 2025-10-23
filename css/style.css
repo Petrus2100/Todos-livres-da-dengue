@@ -585,6 +585,7 @@ html, body {
     }
 }
 
+/* Seções de vídeo do seu CSS original (MANTENHA ISSO) */
 .video-informacao {
     background-color: white; 
     padding: 20px 0; 
@@ -594,10 +595,45 @@ html, body {
 .video {
     background-color: white; 
     display: inline-block;
+    /* Remove 'max-width' ou 'margin: 0 auto' se estiver aqui,
+       e confie no inline-block para centralizar no desktop. */
 }
 
 .video iframe {
     background-color: white; 
+    /* No desktop, o iframe usa as dimensões fixas (560x315) do HTML */
+}
+
+
+/* ------------------------------------------------------------------ */
+/* MEDIA QUERY: Aplica a responsividade (Aspect Ratio Box) em telas pequenas */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    /* 1. O Contêiner (.video) prepara a proporção 16:9 */
+    .video {
+        /* Garante que o contêiner ocupe 100% da largura em telas pequenas */
+        width: 90%; 
+        max-width: none; /* Ignora qualquer largura máxima anterior */
+        margin: 0 auto;  /* Centraliza na tela */
+        display: block;  /* Muda para block para ocupar toda a largura */
+        
+        /* A técnica Aspect Ratio Box: */
+        position: relative;
+        padding-bottom: 56.25%; /* (9 / 16 = 0.5625) */
+        height: 0;
+        overflow: hidden;
+    }
+
+    /* 2. O iframe preenche o contêiner com a proporção correta */
+    .video iframe {
+        /* Sobrescreve as dimensões fixas do HTML para ser responsivo */
+        width: 100% !important; 
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .site-footer {
