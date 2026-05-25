@@ -5,183 +5,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saúde Sem Dengue</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header id="main-header">
-        <div class="icon">
-            <a href="index.html">
-                <img id="header-icon"
-                    src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png"
-                    alt="Ícone da pagina">
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" alt="Saúde Sem Dengue">
             </a>
-        </div>
 
-        <nav class="navbar" id="navbar">
-            <a href="sintomas.html">Sintomas</a>
-            <a href="aedes.html">Aedes aegypti</a>
-            <a href="acoes.html">Ações para combate</a>
-            <a href="combate.html">Combata a dengue junto com a gente</a>
-            <a href="tratamento.html">Tratamento</a>
-            <a href="#Cv"></a>
-        </nav>
+            <nav class="header-nav" id="navbar">
+                <a href="sintomas.html">Sintomas</a>
+                <a href="aedes.html">Aedes aegypti</a>
+                <a href="acoes.html">Ações para combate</a>
+                <a href="combate.html">Combata a dengue junto com a gente</a>
+                <a href="tratamento.html">Tratamento</a>
+            </nav>
 
-        <div class="ico-contact">
-            <a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a>
-            <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                    src="imagens/github(1).png" /></a>
+            <div class="header-actions">
+                <a href="" title="Telefone"><img width="26" height="26" src="imagens/telefone.png" alt="Telefone"></a>
+                <a href="https://github.com/Petrus2100" target="_blank" title="GitHub"><img width="26" height="26" src="imagens/github(1).png" alt="GitHub"></a>
 
-            <form id="search-box" class="search-box" action="/search-results" method="get">
-                <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar">
-                <button type="submit" class="search-btn" id="search-btn">
-                    <img height="20" width="20" src="imagens/lupa.png" alt="Pesquisar">
-                </button>
-            </form>
-        </div>
-        </div>
+                <form id="search-box" class="search-box" action="/search-results" method="get">
+                    <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar...">
+                    <button type="submit" class="search-btn" id="search-btn">
+                        <img src="imagens/lupa.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
 
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
         </div>
     </header>
 
-    <div class="fundo-claro">
-         <main>
-        <div class="introduce" id="introducao-content">
-            <div>
-                <h1>Aedes aegypti</h1>
-                <p>A dengue é uma arbovirose causada por um vírus do gênero Flavivirus e transmitida pela fêmea do
-                    mosquito Aedes aegypti. Trata-se de um problema recorrente de saúde pública em regiões tropicais e
-                    subtropicais, incluindo o Brasil. Os sintomas característicos incluem febre elevada, mialgia,
-                    cefaleia, dor retro-orbitária, exantema e fadiga. Atualmente, não há tratamento antiviral específico
-                    para a doença, sendo o manejo clínico baseado no alívio dos sintomas e na hidratação adequada. A
-                    principal estratégia de controle permanece a prevenção, por meio da eliminação de criadouros do
-                    vetor e do fortalecimento das ações de vigilância epidemiológica.</p>
-            </div>
-
-            <img class="campain-photo" src="imagens/Todos contra a DENGUE.png" alt="Imagem da campanha">
-        </div>
-
-        <div id="conteudo-completo">
-            <section class="carrossel" id="pagina">
-                <div class="container-slider">
-                    <button id="prev-button">
-                        <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Anterior">
-                    </button>
-
-                    <div class="container-imagens">
-                        <img src="imagens/1.jpg" class="slider on" alt="Slide 1">
-                        <img src="imagens/2.jpg" class="slider" alt="Slide 2">
-                        <img src="imagens/WhatsApp Image 2025-09-25 at 20.23.50.jpeg" class="slider" alt="Slide 3">
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5" id="introducao-content">
+                <div class="col-lg-6">
+                    <span class="badge-verde mb-3 d-inline-block">Saúde Pública</span>
+                    <h1 class="mb-3">Aedes aegypti<br>& Dengue</h1>
+                    <p>A dengue é uma arbovirose causada por um vírus do gênero <em>Flavivirus</em> e transmitida pela fêmea do mosquito <em>Aedes aegypti</em>. Os sintomas incluem febre elevada, mialgia, cefaleia, dor retro-orbitária, exantema e fadiga. A principal estratégia de controle permanece a prevenção — eliminação de criadouros e vigilância epidemiológica.</p>
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <a href="sintomas.html" class="btn btn-success fw-700 px-4 py-2" style="font-family:'Nunito',sans-serif;font-weight:700;background:var(--verde);border:none;border-radius:10px;">Ver Sintomas</a>
+                        <a href="acoes.html" class="btn btn-outline-success fw-700 px-4 py-2" style="font-family:'Nunito',sans-serif;font-weight:700;color:var(--verde);border-color:var(--verde);border-radius:10px;">Como Prevenir</a>
                     </div>
-
-                    <button id="next-button">
-                        <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Próximo">
-                    </button>
                 </div>
-        </div>
-    </div>
-
-    </main>
-
-    <h2 class="semi-pilar">Conheça mais:</h2>
-
-    <section class="pilar" id="cards-content">
-
-        <div>
-            <a href="arquivos aedes aegypti/zika-virus.html">
-                <img src="imagens/op-1.jpg" alt="Ícone de Sintomas">
-                <div>
-                    <h1>Zika Vírus</h1>
-                    <p>O Vírus Zika é uma doença viral transmitida principalmente pela picada do mosquito Aedes aegypti,
-                        o mesmo vetor da dengue, chikungunya e febre amarela urbana. A transmissão também pode ocorrer
-                        durante a gravidez (da mãe para o feto) e por contato sexual.</p>
+                <div class="col-lg-6 text-center">
+                    <img class="campain-photo" src="imagens/Todos contra a DENGUE.png" alt="Campanha Todos contra a Dengue">
                 </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="arquivos aedes aegypti/chikungunya.html">
-                <img src="imagens/pexels-saeed-saeed-84328029-32946369.jpg" alt="Ícone de Prevenção">
-                <div>
-                    <h1>CHIKUNGUNYA</h1>
-                    <p>A Chikungunya é uma doença viral transmitida aos humanos principalmente pela picada de mosquitos
-                        infectados do gênero Aedes, notavelmente o Aedes aegypti e o Aedes albopictus. Estes mosquitos
-                        são os mesmos que transmitem a dengue e o Zika.</p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="arquivos aedes aegypti/febre-amarela.html">
-                <img src="imagens/sintomas-febre-amarela.webp" alt="Ícone de Ciclo de Vida">
-                <div>
-                    <h1>Febre Amarela</h1>
-                    <p>A Febre Amarela é uma doença viral aguda, febril e infecciosa, transmitida por mosquitos
-                        infectados. É causada por um Flavivírus e é considerada uma doença de alta relevância por ser
-                        imunoprevenível (existe vacina) e, em suas formas graves, apresentar alta letalidade.</p>
-                </div>
-            </a>
+            </div>
         </div>
     </section>
-    </div>
 
-    <div class="video-informacao" id="video-content">
-        <h2 class="semi-video">Assita ao vídeo: </h2>
+    <section class="carousel-section" id="pagina">
+        <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
 
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/AyrO8Emk1Mo?si=pOmBbE4F-dvs5HCg"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    </div>
-
-    <footer class="site-footer" id="footer-content">
-        <div class="footer-container">
-
-            <div class="footer-column navigation">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
-                    <li><a href="sintomas.html">Sintomas</a></li>
-                    <li><a href="acoes.html">Prevenção</a></li>
-                </ul>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
 
-            <div class="footer-column resources">
-                <h4>Recursos Oficiais</h4>
-                <ul>
-                    <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
-                    <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
-                    <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
-                    <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
-                </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/family.jpg" class="d-block w-100" alt="Dengue campanha 1">
+                    <div class="carousel-caption">
+                        <h5>Proteja sua família</h5>
+                        <p>Pequenas ações diárias evitam grandes problemas de saúde.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/2.jpg" class="d-block w-100" alt="Dengue campanha 2">
+                    <div class="carousel-caption">
+                        <h5>Elimine os focos</h5>
+                        <p>Água parada é o principal criadouro do <em>Aedes aegypti</em>.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/Captura de tela 2026-05-24 224736.png" class="d-block w-100" alt="Dengue campanha 3">
+                    <div class="carousel-caption">
+                        <h5>Juntos contra a dengue</h5>
+                        <p>A prevenção é responsabilidade de toda a comunidade.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-column legal">
-                <h4>Sobre o Site</h4>
-                <ul>
-                    <li><a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a></li>
-                    <li> <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                                src="imagens/github(1).png" /></a></li>
-                    <li><a href="Equipe-fontes/fontes.html" id="rodape-content">Fontes e Créditos</a></li>
-                </ul>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="py-5 px-3" id="cards-content">
+        <div class="container">
+            <h2 class="section-title">Conheça mais:</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="arquivos aedes aegypti/zika-virus.html" class="pilar-card">
+                        <img src="imagens/op-1.jpg" alt="Zika Vírus">
+                        <div class="card-body">
+                            <h4>Zika Vírus</h4>
+                            <p>Doença viral transmitida pelo <em>Aedes aegypti</em>. A transmissão também pode ocorrer durante a gravidez e por contato sexual.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="arquivos aedes aegypti/chikungunya.html" class="pilar-card">
+                        <img src="imagens/pexels-saeed-saeed-84328029-32946369.jpg" alt="Chikungunya">
+                        <div class="card-body">
+                            <h4>Chikungunya</h4>
+                            <p>Doença viral transmitida pelo <em>Aedes aegypti</em> e <em>Aedes albopictus</em>, os mesmos vetores da dengue e do Zika.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="arquivos aedes aegypti/febre-amarela.html" class="pilar-card">
+                        <img src="imagens/sintomas-febre-amarela.webp" alt="Febre Amarela">
+                        <div class="card-body">
+                            <h4>Febre Amarela</h4>
+                            <p>Doença viral aguda e infecciosa. Imunoprevenível por vacina e de alta letalidade nas formas graves.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
 
+    <section class="video-section py-5 px-3" id="video-content">
+        <div class="container">
+            <h2 class="section-title">Assista ao vídeo:</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/AyrO8Emk1Mo?si=pOmBbE4F-dvs5HCg"
+                            title="Vídeo sobre dengue" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="footer-content">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-sm-4">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
+                        <li><a href="sintomas.html">Sintomas</a></li>
+                        <li><a href="acoes.html">Prevenção</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Recursos Oficiais</h4>
+                    <ul>
+                        <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
+                        <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
+                        <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
+                        <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Sobre o Site</h4>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Petrus2100" target="_blank">
+                                <img class="footer-social-icon" width="24" height="24" src="imagens/github(1).png" alt="GitHub"> GitHub
+                            </a>
+                        </li>
+                        <li><a href="Equipe-fontes/fontes.html" id="rodape-content">Fontes e Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Saúde Sem Dengue. Informação para a prevenção da Dengue.</p>
+            <p>&copy; 2025 Saúde Sem Dengue — Informação para a prevenção da Dengue.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>

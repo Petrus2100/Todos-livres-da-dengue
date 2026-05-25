@@ -4,188 +4,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sintomas</title>
+    <title>Sintomas — Saúde Sem Dengue</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style-sintomas.css">
-    <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon"> 
-
-
 </head>
 
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header id="main-header">
-        <div class="icon">
-            <a href="index.html">
-                <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png"
-                    alt="Ícone da rede social">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" alt="Saúde Sem Dengue">
             </a>
-        </div>
 
-        <nav class="navbar" id="navbar">
-            <a href="sintomas.html">Sintomas</a>
-            <a href="aedes.html">Aedes aegypti</a>
-            <a href="acoes.html">Ações para combate</a>
-            <a href="combate.html">Combata a dengue junto com a gente</a>
-            <a href="tratamento.html">Tratamento</a>
-            <a href="#Cv"></a>
-        </nav>
+            <nav class="header-nav" id="navbar">
+                <a href="sintomas.html" class="active">Sintomas</a>
+                <a href="aedes.html">Aedes aegypti</a>
+                <a href="acoes.html">Ações para combate</a>
+                <a href="combate.html">Combata a dengue junto com a gente</a>
+                <a href="tratamento.html">Tratamento</a>
+            </nav>
 
-        <div class="ico-contact">
-            <a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a>
-            <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                    src="imagens/github(1).png" /></a>
-            <form id="search-box" class="search-box" action="/search-results" method="get">
-                <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar">
-                <button type="submit" class="search-btn" id="search-btn">
-                    <img height="20" width="20" src="imagens/lupa.png" alt="Pesquisar">
-                </button>
-            </form>
-        </div>
-        </div>
+            <div class="header-actions">
+                <a href="" title="Telefone"><img width="26" height="26" src="imagens/telefone.png" alt="Telefone"></a>
+                <a href="https://github.com/Petrus2100" target="_blank" title="GitHub"><img width="26" height="26" src="imagens/github(1).png" alt="GitHub"></a>
+                <form id="search-box" class="search-box" action="/search-results" method="get">
+                    <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar...">
+                    <button type="submit" class="search-btn" id="search-btn">
+                        <img src="imagens/lupa.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
 
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
 
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <span style="background:var(--verde-bg);color:var(--verde);font-weight:700;padding:.35rem .75rem;border-radius:30px;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;" class="d-inline-block mb-3">Saúde &amp; Prevenção</span>
+        <h1>Sintomas da Dengue</h1>
+        <p>Reconheça os sinais precocemente e saiba quando buscar atendimento médico urgente.</p>
+    </section>
+
     <main>
 
-        <div class="semi-container">
-            <h1 class="semi-sintoma">Sintomas da Dengue</h1>
+        <!-- ===== SINTOMAS PRINCIPAIS ===== -->
+        <section class="py-5 px-3">
+            <div class="container">
+                <h2 class="section-title">Principais Sintomas</h2>
+                <div class="row g-4">
 
-            <h2>Reconheça a Dengue: Principais Sintomas</h2>
+                    <div class="col-6 col-md-4 col-lg-2dot4">
+                        <div class="sintoma-card">
+                            <img src="imagens/febre.png" alt="Febre alta">
+                            <h3>Febre Alta Repentina</h3>
+                            <p>Febre entre 39°C e 40°C que surge subitamente e dura de 2 a 7 dias.</p>
+                        </div>
+                    </div>
 
-            <div class="sintomas">
-                <img src="imagens/febre.png" alt="Sintoma de febre alta">
-                <h3>Febre Alta Repentina</h3>
-                <p>A dengue costuma iniciar com uma febre alta (39°C a 40°C) que surge de forma súbita. Geralmente, dura
-                    de 2 a 7 dias.</p>
+                    <div class="col-6 col-md-4 col-lg-2dot4">
+                        <div class="sintoma-card">
+                            <img src="imagens/dor-de-cabeca.png" alt="Dor de cabeça">
+                            <h3>Dor de Cabeça Intensa</h3>
+                            <p>Dor forte, especialmente na região atrás dos olhos (dor retro-orbitária).</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2dot4">
+                        <div class="sintoma-card">
+                            <img src="imagens/dor-muscular.png" alt="Dor muscular">
+                            <h3>Dor Muscular</h3>
+                            <p>Dores musculares e nas articulações, causando sensação de corpo quebrado.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2dot4">
+                        <div class="sintoma-card">
+                            <img src="imagens/fraqueza.png" alt="Cansaço">
+                            <h3>Cansaço e Fraqueza</h3>
+                            <p>Fadiga intensa e mal-estar geral que podem persistir por dias.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2dot4">
+                        <div class="sintoma-card">
+                            <img src="imagens/machas na pele.png" alt="Manchas na pele">
+                            <h3>Manchas na Pele</h3>
+                            <p>Manchas vermelhas (exantema) surgem geralmente após o 3º ou 4º dia.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="sintomas">
-                <img src="imagens/dor-de-cabeca.png" alt="Sintoma de dores de cabeça">
-                <h3>Dores Intensas de cabeça</h3>
-                <p>Dores de cabeça: Intensa, especialmente na região atrás dos olhos.</p>
+        <!-- ===== SINAIS DE ALARME ===== -->
+        <section class="py-5 px-3 bg-white" id="grave-content">
+            <div class="container">
+                <div class="row align-items-start g-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-title" style="color:var(--vermelho);">Sinais de Alarme</h2>
+                        <div class="alerta-section">
+                            <h2><i class="bi bi-exclamation-triangle-fill me-2"></i>Busque Emergência Imediatamente!</h2>
+                            <p class="intro-text">
+                                Estes sinais surgem na <strong>fase crítica</strong> — quando a febre baixa, entre o 3º e 7º dia — e indicam que a doença está se agravando. <strong>Procure uma emergência imediatamente.</strong>
+                            </p>
+                            <ul>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Dor abdominal intensa e contínua</strong> — ou dor ao toque na barriga.</span></li>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Vômitos persistentes</strong> — 3 a 5 vezes ou mais em 24 horas.</span></li>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Sangramento de mucosas</strong> — gengiva, nariz, ou sangue no vômito/fezes.</span></li>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Acúmulo de líquidos</strong> — inchaço repentino ou dificuldade para urinar.</span></li>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Letargia ou irritabilidade</strong> — sonolência excessiva, desmaio ou confusão mental.</span></li>
+                                <li><span class="icone-alerta">⚠️</span><span><strong>Hipotensão postural</strong> — tontura ou queda de pressão ao levantar.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="w-100">
+                            <div class="aviso-medicamento mb-3">
+                                <i class="bi bi-capsule-pill me-2" style="font-size:1.2rem;color:#a36200;"></i>
+                                <strong>Não use AAS (Aspirina) ou anti-inflamatórios!</strong><br>
+                                Esses medicamentos aumentam o risco de hemorragias na dengue. Use apenas paracetamol ou dipirona, sempre com orientação médica.
+                            </div>
+                            <div class="p-4 rounded-3" style="background:var(--verde-bg);border-left:4px solid var(--verde);">
+                                <h5 style="font-family:'Playfair Display',serif;color:var(--verde);font-weight:700;">Em caso de dúvida</h5>
+                                <p style="font-size:.93rem;color:#3a5040;margin:.5rem 0 1rem;">Ligue para o Disque Saúde ou acesse uma unidade de saúde próxima.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="combate.html" class="btn btn-sm fw-bold px-3 py-2" style="background:var(--verde);color:#fff;border-radius:8px;font-family:'Nunito',sans-serif;">
+                                        <i class="bi bi-telephone me-1"></i> Notificar Foco
+                                    </a>
+                                    <a href="tratamento.html" class="btn btn-sm fw-bold px-3 py-2" style="background:transparent;color:var(--verde);border:2px solid var(--verde);border-radius:8px;font-family:'Nunito',sans-serif;">
+                                        Ver Tratamento
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="sintomas">
-                <img src="imagens/dor-muscular.png" alt="Sintomas de dores nos musculos">
-                <h3>Dor muscular</h3>
-                <p>Dores: Musculares e nas articulações.</p>
+        <!-- ===== EXAMES ===== -->
+        <section class="py-5 px-3" style="background:#f9fdf9;">
+            <div class="container">
+                <h2 class="section-title">Exames Disponíveis</h2>
+                <p class="mb-4" style="font-size:1rem;color:#4a6855;max-width:620px;">
+                    Há três tipos de exame disponíveis no Brasil para detectar a dengue: Antígeno NS1, Sorologia e RT-PCR.
+                </p>
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="exame-card">
+                            <div class="exame-label">Fase inicial · até o 5º dia</div>
+                            <h3><i class="bi bi-droplet-fill me-2" style="color:var(--verde-claro);"></i>Antígeno NS1</h3>
+                            <ul>
+                                <li><strong>Quando:</strong> Ideal nos primeiros dias de sintomas, geralmente até o 5º dia.</li>
+                                <li><strong>O que detecta:</strong> Uma proteína específica do vírus da dengue, a NS1.</li>
+                                <li><strong>Onde:</strong> Teste rápido em farmácias e laboratórios, ou exame laboratorial.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="exame-card">
+                            <div class="exame-label">A partir do 6º dia</div>
+                            <h3><i class="bi bi-activity me-2" style="color:var(--verde-claro);"></i>Sorológico (IgM/IgG)</h3>
+                            <ul>
+                                <li><strong>Quando:</strong> A partir do 6º dia dos sintomas.</li>
+                                <li><strong>O que detecta:</strong> Anticorpos — IgM indica infecção recente; IgG, infecção antiga ou imunidade.</li>
+                                <li><strong>Onde:</strong> Exclusivamente laboratorial, não disponível em farmácias.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="exame-card">
+                            <div class="exame-label">Fase inicial · vírus ativo</div>
+                            <h3><i class="bi bi-search me-2" style="color:var(--verde-claro);"></i>RT-PCR (Molecular)</h3>
+                            <ul>
+                                <li><strong>Quando:</strong> Nos primeiros dias de infecção, quando o vírus está ativo.</li>
+                                <li><strong>O que detecta:</strong> O material genético do vírus, com alta precisão.</li>
+                                <li><strong>Onde:</strong> Exame laboratorial feito a partir de amostra de sangue.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="sintomas">
-                <img src="imagens/fraqueza.png" alt="Sintomas de cansaço e fraqueza muscular">
-                <h3>Cansaço</h3>
-                <p>Cansaço e fraqueza muito fortes, mal-estar geral.</p>
-            </div>
-
-            <div class="sintomas">
-                <img src="imagens/machas na pele.png" alt="Manchas na pele">
-                <h3>Manchas vermelhas na pele</h3>
-                <p>Manchas vermelhas (exantema), que podem aparecer após o terceiro ou quarto dia.</p>
-            </div>
-
-            <h2 class="titulo-alerta">2. Sinais de Alarme: Busque Ajuda Imediata!</h2>
-            <p class="alerta-texto">Estes sinais surgem na **fase crítica** (quando a febre baixa, entre o 3º e o 7º
-                dia) e indicam que a doença está se agravando. **Procure uma EMERGÊNCIA imediatamente**.</p>
-
-            <div class="sinais-alarme" id="grave-content">
-                <ul>
-                    <li>⚠️ **Dor abdominal intensa e contínua** (ou dor ao toque/palpação na barriga).</li>
-                    <li>⚠️ **Vômitos persistentes** (3 a 5 vezes ou mais em 24 horas).</li>
-                    <li>⚠️ **Sangramento de mucosas** (gengiva, nariz) ou presença de sangue no vômito/fezes.</li>
-                    <li>⚠️ **Acúmulo de líquidos** (inchaço repentino, dificuldade para urinar).</li>
-                    <li>⚠️ **Letargia ou Irritabilidade** (sonolência excessiva, desmaio, ou confusão mental).</li>
-                    <li>⚠️ **Hipotensão postural** (tontura ou queda de pressão ao levantar).</li>
-                </ul>
-            </div>
-
-            <p class="alerta-final">**Não use medicamentos com Ácido Acetilsalicílico (AAS) ou anti-inflamatórios!**
-                Eles aumentam o risco de hemorragias. Siga sempre a orientação médica.</p>
-
-        </div>
-
-        <h1 class="exam">Exames</h1>
-        <div class="lista-exame">
-            <h2>Há três tipos de exame disponíveis no Brasil para detectar a doença: antígeno NS1, sorologia e RT-PCR.
-            </h2>
-
-            <h3 class="title-sintoma">Antígeno NS1</h3>
-            <ul class="exame">
-                <li>Quando fazer: Ideal para os primeiros dias de sintomas, geralmente até o 5º dia, quando o vírus está
-                    se replicando no corpo.</li>
-                <li>O que detecta: Uma proteína específica do vírus da dengue, a NS1.</li>
-                <li>Tipos: Pode ser feito como teste rápido (em farmácias e laboratórios) ou como exame laboratorial.
-                </li>
-            </ul>
-
-            <h3 class="title-sintoma">Teste Sorológico (IgM e IgG) </h3>
-
-            <ul class="exame">
-                <li>Quando fazer: A partir do 6º dia dos sintomas.</li>
-                <li>O que detecta: Anticorpos que o corpo produz para combater a infecção. O IgM indica infecção recente
-                    e o IgG pode indicar uma infecção antiga ou resposta imune mais forte.</li>
-                <li>Tipos: É um teste laboratorial, não encontrado em farmácias. </li>
-            </ul>
-
-            <h3 class="title-sintoma">RT-PCR (Teste Molecular) </h3>
-
-            <ul class="exame">
-                <li>Quando fazer: Também nos primeiros dias de infecção, quando o vírus está ativo.</li>
-                <li>O que detecta: O material genético do vírus, o que permite a identificação da presença do vírus no
-                    organismo.</li>
-                <li>Tipos: É um teste laboratorial realizado a partir de uma amostra de sangue. </li>
-            </ul>
-        </div>
     </main>
 
-
-
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-        <div class="footer-container">
-
-            <div class="footer-column navigation">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
-                    <li><a href="sintomas.html">Sintomas</a></li>
-                    <li><a href="acoes.html">Prevenção</a></li>
-                </ul>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-sm-4">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
+                        <li><a href="sintomas.html">Sintomas</a></li>
+                        <li><a href="acoes.html">Prevenção</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Recursos Oficiais</h4>
+                    <ul>
+                        <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
+                        <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
+                        <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
+                        <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Sobre o Site</h4>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Petrus2100" target="_blank">
+                                <img class="footer-social-icon" width="22" height="22" src="imagens/github(1).png" alt="GitHub"> GitHub
+                            </a>
+                        </li>
+                        <li><a href="Equipe-fontes/fontes.html">Fontes e Créditos</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="footer-column resources">
-                <h4>Recursos Oficiais</h4>
-                <ul>
-                    <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
-                    <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
-                    <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
-                    <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column legal">
-                <h4>Sobre o Site</h4>
-                <ul>
-                    <li><a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a></li>
-                    <li> <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                                src="imagens/github(1).png" /></a></li>
-                    <li><a href="Equipe-fontes/fontes.html">Fontes e Créditos</a></li>
-                </ul>
-            </div>
-
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2025 Saúde Sem Dengue. Informação para a prevenção da Dengue.</p>
+            <p>&copy; 2025 Saúde Sem Dengue — Informação para a prevenção da Dengue.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
+    <style>
+        /* 5 colunas iguais para os cards de sintoma em telas grandes */
+        @media (min-width: 992px) {
+            .col-lg-2dot4 {
+                flex: 0 0 auto;
+                width: 20%;
+            }
+        }
+    </style>
 
 </body>
-
 </html>

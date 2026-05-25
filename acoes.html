@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ações para combate</title>
-    <link rel="stylesheet" href="css/style-acoes.css">
+    <title>Dengue - Ações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="css/style-acoes.css">
 </head>
-
 <body>
     <header id="main-header">
-        <div class="icon">
-            <a href="index.html">
-                <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png"
-                    alt="Ícone da rede social">
+        <div class="header-inner">
+
+            <a href="index.html" class="header-logo">
+                <img src="imagens/Logotipo_simples_para_produtos_orgânicos_verde_2_-removebg-preview.png" alt="Saúde Sem Dengue">
             </a>
-        </div>
 
-        <nav class="navbar" id="navbar">
-            <a href="sintomas.html">Sintomas</a>
-            <a href="aedes.html">Aedes aegypti</a>
-            <a href="acoes.html">Ações para combate</a>
-            <a href="combate.html">Combata a dengue junto com a gente</a>
-            <a href="tratamento.html">Tratamento</a>
-            <a href="#Cv"></a>
-        </nav>
+            <nav class="header-nav" id="navbar">
+                <a href="sintomas.html">Sintomas</a>
+                <a href="aedes.html">Aedes aegypti</a>
+                <a href="acoes.html" class="active">Ações para combate</a>
+                <a href="combate.html">Combata a dengue junto com a gente</a>
+                <a href="tratamento.html">Tratamento</a>
+            </nav>
 
-        <div class="ico-contact">
-            <a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a>
-            <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                    src="imagens/github(1).png" /></a>
-               <form id="search-box" class="search-box" action="/search-results" method="get">
-                    <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar">
+            <div class="header-actions">
+                <a href="" title="Telefone"><img width="26" height="26" src="imagens/telefone.png" alt="Telefone"></a>
+                <a href="https://github.com/Petrus2100" target="_blank" title="GitHub"><img width="26" height="26" src="imagens/github(1).png" alt="GitHub"></a>
+
+                <form id="search-box" class="search-box" action="/search-results" method="get">
+                    <input type="text" class="search-txt" name="q" id="search-txt" placeholder="Pesquisar...">
                     <button type="submit" class="search-btn" id="search-btn">
-                        <img height="20" width="20" src="imagens/lupa.png" alt="Pesquisar">
+                        <img src="imagens/lupa.png" alt="Buscar">
                     </button>
-            </form>
-        </div>
-        </div>
+                </form>
+            </div>
 
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
         </div>
     </header>
 
     <main>
-
-
         <div class="texto-foto">
-            <img class="foto-referencia" src="imagens/fumace-dengue-sp.jpg">
+            <img class="foto-referencia" src="imagens/fumace-dengue-sp.jpg" alt="Fumacê em SP">
 
             <div class="bloco-texto">
                 <div class="title-text">Ações para combate a dengue</div>
@@ -67,129 +62,125 @@
 
         <h2 class="text-title">Vistoria Semanal e Eliminação de Focos</h2>
 
-        <div class="lista-acoes">
-            <div class="item-acao">
-                <img src="imagens/caixa dagua.jpeg" alt="">
+        <div class="container-linhas-acoes">
+            <div class="bloco-acao">
+                <img src="imagens/caixa dagua.jpeg" alt="Caixa d'água">
                 <p>Verifique e tampe bem caixas d'água, tonéis e todos os reservatórios de água.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/areia.jpeg" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/areia.jpeg" alt="Prato com areia">
                 <p>Coloque areia até a borda nos pratos de vasos de plantas ou elimine os pratinhos.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/calha.jpeg" alt="">
+            <div class="bloco-acao">
+                <img src="imagens/calha.jpeg" alt="Calha limpa">
                 <p>Limpe as calhas e lajes, retirando folhas e sujeira que possam reter água.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/garrafa.jpeg" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/garrafa.jpeg" alt="Garrafas invertidas">
                 <p>Guarde garrafas (plásticas e de vidro) sempre de cabeça para baixo.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/pneu.jpeg" alt="">
+            <div class="bloco-acao">
+                <img src="imagens/pneu.jpeg" alt="Pneus cobertos">
                 <p>Guarde pneus em locais cobertos ou entregue-os ao serviço de limpeza urbana.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/lixo.jpeg" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/lixo.jpeg" alt="Lixeira fechada">
                 <p>Mantenha lixeiras bem tampadas e não jogue lixo em terrenos baldios.</p>
             </div>
 
-            <div class="item-acao">
-                <img src="imagens/limpeza.jpeg" alt="">
-                <p>Limpe e troque a água dos bebedouros de animais de estimação diariamente ou, no máximo, a cada cinco dias, lavando as bordas..</p>
+            <div class="bloco-acao">
+                <img src="imagens/limpeza.jpeg" alt="Limpeza de bebedouro">
+                <p>Limpe e troque a água dos bebedouros de animais de estimação diariamente ou, no máximo, a cada cinco dias, lavando as bordas.</p>
             </div>
         </div>
 
         <h2 class="text-title-two">Cuidados com Objetos e Equipamentos</h2>
 
-        <div class="lista-cuidados">
-            <div class="cuidados">
-                <img src="imagens/bandeja.jpg" alt="">
+        <div class="container-linhas-acoes fundo-azul">
+            <div class="bloco-acao">
+                <img src="imagens/bandeja.jpg" alt="Bandeja de geladeira">
                 <p>Retire a água acumulada em bandejas externas de geladeiras e ar-condicionado e lave-as periodicamente.</p>
             </div>
 
-            <div class="cuidados">
-                <img src="imagens/lavagem.jpeg" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/lavagem.jpeg" alt="Lavagem de recipientes">
                 <p>Lave com água e sabão as bordas dos recipientes que acumulam água (como baldes e vasos) para eliminar possíveis ovos do mosquito.</p>
             </div>
 
-            <div class="cuidados">
-                <img src="imagens/lona.jpg" alt="">
+            <div class="bloco-acao">
+                <img src="imagens/lona.jpg" alt="Lona esticada">
                 <p>Estique lonas usadas para cobrir objetos (como entulhos ou piscinas) para evitar a formação de poças.</p>
             </div>
 
-            <div class="cuidados">
-                <img src="imagens/picina.jpg" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/picina.jpg" alt="Piscina tratada">
                 <p>Mantenha piscinas limpas e tratadas com cloro.</p>
             </div>
         </div>
 
         <h2 class="text-title">Outras Medidas Importantes</h2>
 
-        <div class="listT">
-             <div class="medidas"> 
-                <img src="imagens/agente 47.jpg" width="500" alt="sobre-nos">
+        <div class="container-linhas-acoes fundo-azul">
+             <div class="bloco-acao"> 
+                <img src="imagens/agente 47.jpg" alt="Agente de saúde">
                 <p>Permita o acesso dos agentes de saúde/endemias à sua casa ou estabelecimento para que realizem a vistoria e, se necessário, apliquem larvicidas.</p>
             </div>
 
-            <div>
-                <img src="imagens/prevenção.webp" alt="">
+            <div class="bloco-acao invertido">
+                <img src="imagens/prevenção.webp" alt="Casa fechada protegida">
                 <p>Se for viajar ou deixar o imóvel fechado, remova ou cubra bem todos os recipientes que possam acumular água.</p>
             </div>
         </div>
-
         
         <div>
             <p class="alerta-final">A luta contra a dengue é uma responsabilidade de todos! Ao realizar essas ações regularmente, você protege a si mesmo, sua família e toda a comunidade.</p>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-
-            <div class="footer-column navigation">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
-                    <li><a href="sintomas.html">Sintomas</a></li>
-                    <li><a href="acoes.html">Prevenção</a></li>
-                </ul>
+    <footer class="site-footer" id="footer-content">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-sm-4">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="Equipe-fontes/index-sobre.html">Sobre Nós</a></li>
+                        <li><a href="sintomas.html">Sintomas</a></li>
+                        <li><a href="acoes.html">Prevenção</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Recursos Oficiais</h4>
+                    <ul>
+                        <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
+                        <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
+                        <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
+                        <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Sobre o Site</h4>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Petrus2100" target="_blank">
+                                <img class="footer-social-icon" width="24" height="24" src="imagens/github(1).png" alt="GitHub"> GitHub
+                            </a>
+                        </li>
+                        <li><a href="Equipe-fontes/fontes.html" id="rodape-content">Fontes e Créditos</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="footer-column resources">
-                <h4>Recursos Oficiais</h4>
-                <ul>
-                    <li><a href="https://www.saude.gov.br/" target="_blank">Ministério da Saúde</a></li>
-                    <li><a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=812" target="_blank">Notificar Foco</a></li>
-                    <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank">Unidades de Saúde</a></li>
-                    <li><a href="http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/denguebbr.def" target="_blank">Mapa de Casos</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column legal">
-                <h4>Sobre o Site</h4>
-                <ul>
-                    <li><a href="" rel="_blank"><img width="30" height="30" src="imagens/telefone.png" /></a></li>
-                    <li> <a href="https://github.com/Petrus2100" rel="_blank"><img width="30" height="30"
-                    src="imagens/github(1).png" /></a></li>
-                    <li><a href="Equipe-fontes/fontes.html">Fontes e Créditos</a></li>
-                </ul>
-            </div>
-
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2025 Saúde Sem Dengue. Informação para a prevenção da Dengue.</p>
+            <p>&copy; 2025 Saúde Sem Dengue — Informação para a prevenção da Dengue.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
