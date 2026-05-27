@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "analgesicos": "tratamento.html",
         "anti-inflamatorios": "tratamento.html",
         "hospitalizacao": "tratamento.html",
+        "qdenga": "tratamento.html#vacina-container",
 
         // Ações e Combate
         "combate": "combate.html",
@@ -81,7 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Equipe e Fontes
         "sobre nós": "Equipe-fontes/index-sobre.html",
+        "sobre nos": "Equipe-fontes/index-sobre.html",
         "nós": "Equipe-fontes/index-sobre.html",
+        "nos": "Equipe-fontes/index-sobre.html",
         "equipe": "Equipe-fontes/index-sobre.html",
         "quem somos": "Equipe-fontes/index-sobre.html",
         "fontes": "Equipe-fontes/index-sobre.html#fontes-content",
@@ -153,24 +156,23 @@ document.addEventListener('DOMContentLoaded', function () {
         "imunizacao": "arquivos aedes aegypti/febre-amarela.html",
 
         // Página inicial âncoras
-        "dengue": "#introducao-content",
-        "informacao": "#introducao-content",
-        "o que e": "#introducao-content",
-        "geral": "#introducao-content",
-        "inicio": "#introducao-content",
-        "carrossel": "#pagina",
-        "campanha": "#pagina",
-        "slides": "#pagina",
-        "cards": "#cards-content",
-        "conheça mais": "#cards-content",
+        "dengue": "index.html#introducao-content",
+        "informacao": "index.html#introducao-content",
+        "o que e": "index.html#introducao-content",
+        "geral": "index.html#introducao-content",
+        "inicio": "index.html#introducao-content",
+        "campanha": "index.html#pagina",
+        "slides": "index.html#pagina",
+        "cards": "index.html#cards-content",
+        "conheça mais": "index.html#cards-content",
         "doencas": "#cards-content",
-        "outras": "#cards-content",
-        "video": "#video-content",
-        "video dengue": "#video-content",
-        "assista": "#video-content",
-        "youtube": "#video-content",
-        "rodape": "#footer-content",
-        "saiba mais": "#footer-content",
+        "outras": "index.html#cards-content",
+        "video": "index.html#video-content",
+        "video dengue": "index.html#video-content",
+        "assista": "index.html#video-content",
+        "youtube": "index.html#video-content",
+        "rodape": "index.html#footer-content",
+        "saiba mais": "index.html#footer-content",
     };
 
     function rolarParaSecao() {
